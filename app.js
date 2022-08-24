@@ -4,6 +4,7 @@ const app = express()
 const port = 4000
 
 const url = 'mongodb://127.0.0.1/facebook'
+
 mongoose.connect(url,{ useNewUrlParser: true })
 const connection = mongoose.connection
 
