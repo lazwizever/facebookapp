@@ -36,6 +36,8 @@ router.put('/:id',async (req,res) =>{
         body: req.body.body,
     })
 
+
+
     try {
         const response = await post.save()
         res.json(response)
@@ -65,7 +67,7 @@ router.get('/:id', async (req,res) =>{
     }
 })
 
-router.get('/user/:userId', async (req, res) => {
+router.get('/users/:userId', async (req, res) => {
     try {
         const post = await Post.find({userId:req.params.userId})
         res.json(post)
